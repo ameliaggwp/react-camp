@@ -1,4 +1,23 @@
 import React from "react";
+import Campgrounds from "./Campgrounds";
+
+const campgroundTile = () => {
+  return (
+    <div class="col-md-3 col-sm-6">
+      <div class="thumbnail">
+        <img src={this.props.image} />
+        <div class="caption">
+          <h4>{this.props.name}</h4>
+        </div>
+        <p>
+          <a href="" class="btn btn-btn-primary">
+            More Info
+          </a>
+        </p>
+      </div>
+    </div>
+  );
+};
 
 const Landing = () => {
   return (
@@ -14,21 +33,22 @@ const Landing = () => {
           </p>
         </div>
       </header>
-
       <div class="row text-center">
-        <div class="col-md-3 col-sm-6">
-          <div class="thumbnail">
-            <img src="campground.image" />
-            <div class="caption">
-              <h4> campground.name</h4>
+        {Campgrounds.map((campground) => (
+          <div class="col-md-3 col-sm-6">
+            <div class="thumbnail">
+              <img src={campground.image} />
+              <div class="caption">
+                <h4>{campground.name}</h4>
+              </div>
+              <p>
+                <a href="" class="btn btn-btn-primary">
+                  More Info
+                </a>
+              </p>
             </div>
-            <p>
-              <a href="" class="btn btn-btn-primary">
-                More Info
-              </a>
-            </p>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );
