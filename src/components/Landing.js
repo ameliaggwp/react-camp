@@ -1,24 +1,6 @@
 import React from "react";
 import Campgrounds from "./Campgrounds";
 
-const campgroundTile = () => {
-  return (
-    <div class="col-md-3 col-sm-6">
-      <div class="thumbnail">
-        <img src={this.props.image} />
-        <div class="caption">
-          <h4>{this.props.name}</h4>
-        </div>
-        <p>
-          <a href="" class="btn btn-btn-primary">
-            More Info
-          </a>
-        </p>
-      </div>
-    </div>
-  );
-};
-
 const Landing = () => {
   return (
     <div class="container">
